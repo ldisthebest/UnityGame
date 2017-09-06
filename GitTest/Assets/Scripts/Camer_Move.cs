@@ -9,7 +9,11 @@ public class Camer_Move : MonoBehaviour {
     private float move_z;
     private float move_x;
     private Transform m_transform;
+
+    private GameObject the_ball;
+
 	void Awake () {
+        the_ball = GameObject.Find("sphere");
         m_transform = this.transform;
 	}
 	
@@ -18,5 +22,7 @@ public class Camer_Move : MonoBehaviour {
         move_z = Input.GetAxisRaw("Horizontal")*speed; //杨：添加raw
         move_x = Input.GetAxisRaw("Vertical")*speed;  
         m_transform.Translate(new Vector3(move_z,0,move_x)*Time.deltaTime);
+
+        the_ball.SetActive(false);
 	}
 }
