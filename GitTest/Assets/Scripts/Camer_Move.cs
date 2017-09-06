@@ -14,7 +14,11 @@ public class Camer_Move : MonoBehaviour {
       
         m_transform = this.transform;
 
+
         print("now it's luo updating this");
+
+        print("Yang is changing this");
+
 	}
 	
 	// Update is called once per frame
@@ -24,7 +28,11 @@ public class Camer_Move : MonoBehaviour {
         m_transform.Translate(new Vector3(move_z,0,move_x)*Time.deltaTime);
 
 
+
         
+
 
 	}
 }
+
+//我在这里还添加了哈哈
