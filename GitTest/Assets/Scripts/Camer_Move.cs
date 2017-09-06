@@ -15,8 +15,8 @@ public class Camer_Move : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        move_z = Input.GetAxis("Horizontal")*speed;
-        move_x = Input.GetAxis("Vertical")*speed;
+        move_z = Input.GetAxisRaw("Horizontal")*speed; //杨：添加raw
+        move_x = Input.GetAxisRaw("Vertical")*speed;  
         m_transform.Translate(new Vector3(move_z,0,move_x)*Time.deltaTime);
 	}
 }
