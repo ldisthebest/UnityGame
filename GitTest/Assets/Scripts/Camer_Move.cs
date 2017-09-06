@@ -10,16 +10,11 @@ public class Camer_Move : MonoBehaviour {
     private float move_x;
     private Transform m_transform;
 
-
-    private GameObject the_ball;
-
-
-    private Material cube;
-
 	void Awake () {
-        the_ball = GameObject.Find("sphere");
+      
         m_transform = this.transform;
-        cube = GameObject.Find("cube").GetComponent<Material>();
+
+        print("now it's luo updating this");
 	}
 	
 	// Update is called once per frame
@@ -29,11 +24,7 @@ public class Camer_Move : MonoBehaviour {
         m_transform.Translate(new Vector3(move_z,0,move_x)*Time.deltaTime);
 
 
-        the_ball.SetActive(false);
-
-        cube.color = Color.red;
-
-        print("this is luo typing");
+        
 
 	}
 }
