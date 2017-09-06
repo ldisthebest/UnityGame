@@ -33,5 +33,7 @@ public class Camer_Move : MonoBehaviour {
 
         cube.color = Color.red;
 
+        print("this is luo typing");
+
 	}
 }
