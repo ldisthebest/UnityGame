@@ -9,9 +9,16 @@ public class Camer_Move : MonoBehaviour {
     private float move_z;
     private float move_x;
     private Transform m_transform;
+
 	void Awake () {
+      
         m_transform = this.transform;
+
+
+        print("now it's luo updating this");
+
         print("Yang is changing this");
+
 	}
 	
 	// Update is called once per frame
@@ -19,6 +26,11 @@ public class Camer_Move : MonoBehaviour {
         move_z = Input.GetAxisRaw("Horizontal")*speed; //杨：添加raw
         move_x = Input.GetAxisRaw("Vertical")*speed;  
         m_transform.Translate(new Vector3(move_z,0,move_x)*Time.deltaTime);
+
+
+
+        
+
 
 	}
 }
